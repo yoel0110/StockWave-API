@@ -17,5 +17,7 @@ func Route() *routing.Router {
 	apiProducts := api.Group("/products")
 	apiProducts.Post("/createproducts", products.CreateProduct)
 	apiProducts.Get("/getproducts", products.GetProducts)
+	apiProducts.Get("/getproductById", products.GetProductByID)
+	apiProducts.Get("/getproductByCategory", products.GetProductByCategory)
 	return router
 }
